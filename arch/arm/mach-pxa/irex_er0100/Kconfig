@@ -1,0 +1,28 @@
+menuconfig MACH_PXA_IREX_ER0100
+	bool "iRex ER0100"
+	select PXA25x
+	select BOARD_IRQ_MAP_BIG
+	help
+		Say Y here if you intend to run this kernel on a
+		iRex ER0100 (iLiad). Currently there is only basic support
+		for this eReader.
+
+config PXA_IREX_ER0100_PCMCIA
+    tristate "iRex PCMCIA"
+    depends on MACH_PXA_IREX_ER0100 && PCMCIA_PXA2XX
+    help
+      This enables support for using PCMCIA (CompactFlash) cards
+      on "iRex ER0100". You will also need to enable PXA2xx PCMCIA
+      support in the PCMCIA/Cardbus support menu.
+
+config PXA_IREX_ER0100_BUTTON
+    tristate "iRex Button Driver"
+    depends on MACH_PXA_IREX_ER0100
+    help
+      This enables support for buttons on "iRex ER0100".
+
+config PXA_IREX_ER0100_BATTERY
+    tristate "iRex Battery Driver"
+    depends on MACH_PXA_IREX_ER0100
+    help
+      This enables support for battery on "iRex ER0100".
