@@ -13,7 +13,7 @@
 #include <linux/irq.h>
 #include <linux/input.h>
 #include <linux/gpio_keys.h>
-//#include <linux/touchscreen-adc.h>
+#include <linux/touchscreen-adc.h>
 #include <linux/delay.h>
 
 #include <asm/mach-types.h>
